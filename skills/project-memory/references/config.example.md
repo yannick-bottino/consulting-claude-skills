@@ -1,6 +1,6 @@
 # Configuration de référence (instanciation du substrat de mémoire)
 
-> Tout le métier vit ici, jamais dans le `SKILL.md` ni dans `memory-structure.md`. Le skill `project-memory` reste générique ; cette config l'instancie pour une mission de conseil. Copier ce fichier en `config.md` et l'adapter à votre organisation.
+> Tout le métier vit ici, jamais dans le `SKILL.md` ni dans `memory-structure.md`. Le skill `project-memory` reste générique ; cette config l'instancie pour une mission de conseil. Adapter les valeurs ci-dessous à votre organisation : le skill lit ce fichier directement.
 >
 > Défaut fixe (ci-dessous). Le tailoring est proposé par `project-init` à partir du contexte de mission découvert à l'init. Sans ajustement, le défaut est conservé (cohérence inter-missions).
 

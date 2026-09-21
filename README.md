@@ -68,7 +68,7 @@ cp -r consulting-claude-skills/skills/benchmark ~/.claude/skills/
 Two skills expect one value of your own:
 
 - **`file-naming-standard`** — set your firm name via the `FIRM_NAME` environment variable, the `--firm` flag, or a `Cabinet : <name>` line in the project `CLAUDE.md`. Defaults to `Firm`.
-- **`project-memory`** — `skills/project-memory/references/config.example.md` holds the decision domains, milestones, `context.md` schema and log retention policy. Copy it to `config.md` and adapt.
+- **`project-memory`** — `skills/project-memory/references/config.example.md` holds the decision domains, milestones, `context.md` schema and log retention policy. Edit it in place; `project-init` proposes adjustments at init.
 
 `benchmark` ships no brand charter by design: visual identity is resolved per mission through `references/branding.md`, from an external brand skill, a token file, or a neutral fallback.
 
