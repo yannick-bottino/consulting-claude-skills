@@ -10,14 +10,19 @@
     {
       "name": "consulting-skills",
       "version": "1.0.0",
-      "source": {
-        "source": "github",
-        "repo": "yannick-bottino/consulting-claude-skills"
-      },
+      "source": "./",
       "description": "19 skills for consulting delivery: competitive benchmarks, deep research, project memory, deliverable QA, meeting summaries, prompt engineering.",
       "homepage": "https://github.com/yannick-bottino/consulting-claude-skills",
       "license": "MIT",
-      "keywords": ["consulting", "skills", "research", "benchmark", "esg", "deliverables", "memory"]
+      "keywords": [
+        "consulting",
+        "skills",
+        "research",
+        "benchmark",
+        "esg",
+        "deliverables",
+        "memory"
+      ]
     }
   ]
 }
