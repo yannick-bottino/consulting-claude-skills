@@ -1,0 +1,11 @@
+__pycache__/
+_parsed/
+tests/.pytest_cache/
+*.pyc
+.pytest_cache/
+
+# Quality validation harness — proprietary data and run artifacts
+tests/quality/_fixtures/*
+!tests/quality/_fixtures/.gitkeep
+tests/quality/results/*
+!tests/quality/results/.gitkeep

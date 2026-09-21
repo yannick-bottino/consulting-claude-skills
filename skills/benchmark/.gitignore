@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Crawl4AI / Playwright
+.playwright/
+crawl4ai_cache/
+
+# Generated outputs (mission-specific, not part of the skill)
+outputs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp

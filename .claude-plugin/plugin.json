@@ -1,0 +1,12 @@
+{
+  "name": "consulting-skills",
+  "version": "1.0.0",
+  "description": "Client-agnostic Claude skills for management consulting: competitive benchmarks, deep research, project memory, deliverable QA, and prompt engineering.",
+  "author": {
+    "name": "Yannick Bottino"
+  },
+  "homepage": "https://github.com/yannick-bottino/consulting-claude-skills",
+  "repository": "https://github.com/yannick-bottino/consulting-claude-skills",
+  "license": "MIT",
+  "skills": "./skills"
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "query": "je dois faire un benchmark concurrentiel pour notre client Banque Solaris sur le marché de l'assurance emprunteur. On veut analyser CNP, Cardif, SwissLife et 2-3 autres acteurs. C'est pour un livrablecomité la semaine prochaine",
+    "should_trigger": true
+  },
+  {
+    "query": "on a un pitch Velora la semaine prochaine, j'ai besoin d'une analyse des concurrents du marché LMD France — Carvio, Rentalis, Drivalis, Rouli. Tu peux faire ça ?",
+    "should_trigger": true
+  },
+  {
+    "query": "compare-moi les offres de Novatel Pro, Kaptel Business et Orbitel Entreprises sur la téléphonie mobile B2B. Je veux savoir qui est le mieux positionné et pourquoi",
+    "should_trigger": true
+  },
+  {
+    "query": "j'ai besoin d'un paysage concurrentiel du marché du coworking premium en France pour notre client. Je ne sais pas encore quels acteurs regarder",
+    "should_trigger": true
+  },
+  {
+    "query": "structured methodology benchmark — can you run a competitive analysis on the French neobank market? Players: Revolut, N26, Bunq, Lydia. Client is a traditional bank looking to launch a digital offer",
+    "should_trigger": true
+  },
+  {
+    "query": "fais-moi une analyse des acteurs du marché de la mobilité électrique B2B en France — Beev, Alphabet, ALD Electric, Free2Move. 4 dimensions standard",
+    "should_trigger": true
+  },
+  {
+    "query": "j'ai un client dans la logistique urbaine et je veux comprendre qui fait quoi sur le marché — Stuart, Urby, Chronopost City, DHL Express. tu peux m'aider à structurer ça ?",
+    "should_trigger": true
+  },
+  {
+    "query": "benchmark des solutions RH SIRH pour les PME françaises — Lucca, Factorial, Personio, PayFit. Quel acteur est le mieux positionné sur le segment 50-200 salariés ?",
+    "should_trigger": true
+  },
+  {
+    "query": "on fait un projet pour un acteur de la santé au travail, j'ai besoin de comparer Mutualis, Harmonie Mutuelle, AG2R La Mondiale et Apicil sur leurs offres entreprises",
+    "should_trigger": true
+  },
+  {
+    "query": "cartographie concurrentielle marché financement de la croissance PME — October, Bpifrance Direct, Mansa, Silvr. segmentation par type de financement et pricing",
+    "should_trigger": true
+  },
+  {
+    "query": "benchmark RSE du secteur textile pour notre client : Veja, Patagonia, Sézane, Balzac Paris. Je veux comparer leur maturité sur les matières, les audits fournisseurs et la gouvernance",
+    "should_trigger": true
+  },
+  {
+    "query": "le scorecard du benchmark sort à 78%, tu peux corriger les gaps et relancer le scoring ?",
+    "should_trigger": true
+  },
+  {
+    "query": "je veux comparer la maturité data & IA de 4 assureurs français, un état des lieux, pas une comparaison de prix",
+    "should_trigger": true
+  },
+  {
+    "query": "benchmark des fournisseurs de bornes de recharge en copropriété, avec des captures d'écran de leurs pages tarifaires pour le comité",
+    "should_trigger": true
+  },
+  {
+    "query": "peux-tu m'écrire une analyse SWOT pour Velora ?",
+    "should_trigger": false
+  },
+  {
+    "query": "j'ai les slides du benchmark Carvio/Rentalis/Drivalis/Rouli, peux-tu les mettre en forme en PowerPoint avec la charte graphique du cabinet ?",
+    "should_trigger": false
+  },
+  {
+    "query": "what is the market size of the French car subscription market in 2024 ?",
+    "should_trigger": false
+  },
+  {
+    "query": "j'ai besoin d'aide pour rédiger une note de cadrage pour un projet de transformation digitale chez un acteur bancaire",
+    "should_trigger": false
+  },
+  {
+    "query": "compare Carvio et Drivalis en 3 lignes pour ma prochaine réunion",
+    "should_trigger": false
+  },
+  {
+    "query": "j'ai une réunion avec le DSI de Société Générale demain, tu peux me préparer une fiche de briefing sur la banque ?",
+    "should_trigger": false
+  },
+  {
+    "query": "rédige un executive summary du marché LMD à partir des notes que je vais te donner",
+    "should_trigger": false
+  },
+  {
+    "query": "j'ai ce fichier Excel avec les prix de 5 acteurs LMD, peux-tu faire un tableau comparatif propre ?",
+    "should_trigger": false
+  },
+  {
+    "query": "quelles sont les meilleures pratiques pour structurer un appel d'offres dans le secteur des services financiers ?",
+    "should_trigger": false
+  },
+  {
+    "query": "j'ai fait une veille sur Revolut et N26 ce mois-ci, peux-tu synthétiser les points clés de mes notes ?",
+    "should_trigger": false
+  }
+]

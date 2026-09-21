@@ -1,0 +1,158 @@
+{
+  "skill_name": "benchmark",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Je veux réaliser un benchmark concurrentiel du marché de l'assurance emprunteur en France pour notre client Banque Solaris. Les acteurs à analyser sont : CNP Assurances, Cardif (BNP), SwissLife, Apicil, et Alan. On veut comparer leurs offres sur le segment B2C, emprunt immobilier. Je n'ai pas encore décidé des dimensions d'analyse.",
+      "expected_output": "Skill runs Phase 0 interactively: asks Q1-Q5 in sequence, proposes insurance-adapted dimensions (e.g., Garanties & exclusions, Conditions d'accès, Tarification, Expérience client/digital), confirms mission config. Then collects data per actor, produces 5 actor files in outputs/assurance-emprunteur-banque-solaris/actors/ + pricing-synthesis.md + exec-summary.md + benchmark.json",
+      "assertions": [
+        "Phase 0 asks at least 3 clarifying questions via AskUserQuestion before starting analysis",
+        "Proposed dimensions are adapted to insurance market — NOT the default LMD dimensions",
+        "mission-config.json is created in outputs/ before analysis starts",
+        "At least 3 actor .md files produced in outputs/assurance-emprunteur-banque-solaris/actors/",
+        "benchmark.json is present and valid JSON",
+        "Each actor file has a Sources block with at least one citation",
+        "No price data presented without a source marker (URL, document, or [ESTIMATION]/[N/D])",
+        "Skill presents a dimension selection menu with at least 3 options (A/B/C or equivalent) during Q4",
+        "Skill includes a rationale block ('Pourquoi ces axes' or equivalent) explaining why the proposed dimensions fit the insurance market"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Lance un benchmark LMD France pour Velora. Acteurs : Carvio, Rentalis, Drivalis, Rouli. Véhicule de référence Peugeot 308 équivalente, durées 1/3/6/12 mois, 500 km/mois. Utilise les dimensions standard.",
+      "expected_output": "Skill confirms mission config quickly (most info provided), uses default 4 default dimensions with minor LMD adaptation, produces 4 actor files, pricing-synthesis.md with 4x4 table (4 actors x 4 durations), exec-summary.md with positioning table, benchmark.json",
+      "assertions": [
+        "Skill presents a mission config summary and asks for confirmation before starting",
+        "Uses the 4 standard default dimensions (Offre/Conditions, Contenu, Cibles/TOV, Pricing)",
+        "pricing-synthesis.md contains a table with columns for 1m/3m/6m/12m",
+        "All 4 actors appear in the pricing table",
+        "exec-summary.md contains a positioning table with all 4 actors",
+        "benchmark.json pricing_matrix.data array has 4 entries (one per actor)",
+        "benchmark.json is valid JSON (python3 -c \"import json; json.load(open(...))\" succeeds)",
+        "Skill presents a dimension selection menu with at least 3 options (A/B/C or equivalent) during Q4",
+        "Skill includes a rationale block ('Pourquoi ces axes' or equivalent) explaining why the proposed dimensions fit the LMD market"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "J'ai besoin d'un benchmark des solutions de téléphonie mobile B2B en France. Je veux comparer Novatel Pro, Kaptel Business, Orbitel Entreprises et Free Pro. Je veux comprendre les offres, les prix, les engagements et ce qui les différencie. Je n'ai pas encore réfléchi aux dimensions.",
+      "expected_output": "Skill identifies dimensions are undefined, uses Q4 to propose telecom B2B-specific dimensions (e.g., Offres & forfaits, Couverture & qualité réseau, Services B2B & gestion de flotte, Tarification & engagement), confirms with user, then proceeds with analysis of 4 actors",
+      "assertions": [
+        "Skill uses AskUserQuestion to propose and confirm telecom-specific dimensions before collecting data",
+        "Proposed dimensions include at least one telecom-specific concept (coverage, fleet management, network quality, etc.)",
+        "Skill presents a dimension selection menu with at least 3 options (A/B/C or equivalent) during Q4",
+        "Skill includes a rationale sentence ('Pourquoi ces axes' or equivalent) explaining why the proposed dimensions fit the telecom B2B market",
+        "At least 2 actor .md files produced",
+        "Each actor file contains an INSIGHTS section with ✅ and ⚠️ markers",
+        "Sources are cited in each actor file",
+        "benchmark.json actors array contains at least 2 entries"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Je veux benchmarker le marché du coworking premium en France, notamment à Paris et Lyon. Je ne sais pas encore quels acteurs analyser — peux-tu me proposer une liste ? Le client s'appelle WeWork qui cherche à comprendre ses concurrents directs.",
+      "expected_output": "Skill runs Step 0.2b peer discovery: performs at least 2 WebSearches to identify market actors, produces a categorized list of 6+ actors, presents it to the user for validation, and waits for confirmation before proceeding to Phase 1.",
+      "assertions": [
+        "Skill does NOT immediately start Phase 1 — it triggers Step 0.2b peer discovery first",
+        "At least 2 distinct WebSearch queries are issued to find coworking market actors",
+        "Output includes a categorized list of at least 6 actors with one-line descriptions",
+        "Actors are grouped by category (e.g., pure-players, flex office réseaux, grands groupes)",
+        "Skill asks for user validation of the actor list via AskUserQuestion before proceeding",
+        "mission-config.json is NOT created until after user confirms the actor list"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Benchmark concurrentiel du marché des mutuelles santé entreprise en France pour notre client Mutualis. Acteurs : AG2R La Mondiale, Harmonie Mutuelle, Apicil, Axa Santé. Je veux définir moi-même les axes d'analyse — je ne veux pas utiliser des dimensions standard.",
+      "expected_output": "Skill presents sector-matched dimension proposal (Santé au Travail sector), then correctly enters option D flow: iterates with the consultant to define custom dimensions, confirms the final custom dimension set via AskUserQuestion before proceeding, then runs analysis with the consultant-defined dimensions.",
+      "assertions": [
+        "Skill proposes sector-specific dimensions (Santé au Travail / mutuelle) before entering custom flow",
+        "Skill correctly handles consultant's request to define own axes — does NOT lock the standard dimensions without asking",
+        "Skill iterates with consultant via AskUserQuestion to collect and confirm custom dimensions",
+        "Custom dimensions are confirmed before Phase 1 data collection begins",
+        "mission-config.json reflects the custom dimensions (not the default 4 dims)",
+        "At least 2 actor .md files produced using the custom dimensions",
+        "benchmark.json dimensions array reflects the custom (not default) dimension set"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Benchmark RSE du marché de la mode responsable en France pour notre client AMI Paris. Acteurs : Veja, Patagonia Europe, Sézane, Balzac Paris. Je veux comparer leur maturité RSE : matières, chaîne d'approvisionnement, social, gouvernance. Va jusqu'au scorecard.",
+      "expected_output": "Skill classifies nature=maturity and sector=sustainability from the market description, loads the sustainability search module and the maturity profile, uses the maturity dimension sub-fields, produces actor files with sourced quantified metrics and verbatim-backed certifications, then a scorecard scored on the applicable total (core + maturity sector sections), never penalised for absent offer sections.",
+      "assertions": [
+        "mission-config.json contains benchmark_nature = \"maturity\" and sector = \"sustainability\"",
+        "A legacy config carrying benchmark_type = \"rse\" is still accepted and read as the same nature",
+        "Actor dimensions use the maturity sub-fields (maturity_level, key_metrics, certifications, commitments) — NOT description/content/targets_tov/pricing",
+        "validate_benchmark.py actor mode returns PASS with no warning about vehicle_catalog or optional_services",
+        "The scorecard header states benchmark_nature, sector, the applicable section list and the applicable total",
+        "No scorecard section is scored 0 because it does not apply to this nature — non-applicable sections are marked N/A and excluded from the denominator",
+        "The scorecard total is NOT out of 80 — the denominator reflects the applicable sections only",
+        "A run with complete data can reach a score_pct of 90% or above (convergence is reachable for this nature)",
+        "Every certification, label, or third-party attribution carries a verbatim quote, or is marked [INTERPRETATION]",
+        "No claim states that a third party audited a company when the source only describes a methodology review",
+        "Phase 7 decision is taken on score_pct, not on a raw point total"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Le benchmark LMD Velora dans outputs/lmd-france-velora/ est déjà produit, le scorecard sort à 78%. Améliore-le et relance le scoring.",
+      "expected_output": "Skill enters Phase 7: reads the existing scorecard, classifies each gap as corrigeable or structurel, corrects only the corrigeable ones, regenerates only the deliverables whose source data changed plus benchmark.json and the HTML, re-scores, and appends a percentage-based comparison with the previous iteration.",
+      "assertions": [
+        "Skill reads the existing benchmark-scorecard.md before making any change",
+        "Each gap is explicitly classified corrigeable or structurel",
+        "Only corrigeable gaps are worked on — structural gaps are documented, not retried",
+        "A synthesis file whose source data did not change is NOT regenerated",
+        "benchmark.json is regenerated from the actor JSONs, and the HTML from benchmark.json",
+        "The new scorecard contains a comparison block expressed in percentage points, not raw points",
+        "Iteration count is tracked and the run stops at 3 iterations maximum",
+        "If the score does not improve after an iteration, the skill stops and tells the consultant the remaining gaps are structural",
+        "No unsourced figure is introduced or retained to raise a score"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Benchmark des offres de mobilité partagée B2B en Suisse pour notre client TransRail. Acteurs : Sharego, Alpaloc, Drivalis Suisse, Citymove. Je veux les prix mensuels, et des captures d'écran des pages tarifaires pour illustrer le comité.",
+      "expected_output": "Skill sets nature=offer, sector=mobilite, locale country=CH / currency=CHF / output_language=fr, builds the comparability contract, nominates capture targets per actor, runs one capture pass via scripts/capture.py, and inlines the captioned derivatives in the HTML report.",
+      "assertions": [
+        "mission-config.json carries benchmark_nature = \"offer\" and a sector, not a benchmark_type",
+        "locale.country is CH and locale.currency is CHF — INSEE and EUR are NOT assumed",
+        "The comparability contract is stated and validated with the consultant before data collection",
+        "Actor subagents do NOT launch a browser: they emit capture_targets with intent, url and claim",
+        "The orchestrator runs scripts/capture.py once over a merged capture-plan.json, not once per actor",
+        "capture-manifest.json exists and every displayed screenshot has status ok",
+        "A blocked capture (captcha/WAF) is documented as a structural gap, not retried in a loop",
+        "The HTML report inlines the .web.jpg derivatives, never the full-resolution PNGs",
+        "Every screenshot displayed carries its source URL and capture date",
+        "Prices in CHF are detected as prices by the validator (no currency-specific blind spot)"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Je veux comparer la maturité data & IA de 4 assureurs français : AXA, Generali, MAIF, Groupama. Où en sont-ils, qui est en avance, et sur quoi ? Pas de comparaison de prix, c'est un état des lieux.",
+      "expected_output": "Skill classifies nature=maturity (not offer, despite the actors being commercial companies) and sector=assurance, loads the maturity profile, uses maturity sub-fields, produces maturity-synthesis.md instead of pricing-synthesis.md, and applies the SOCLE / ÉCART / TERRAIN D'AVANCE recommendation frame.",
+      "assertions": [
+        "benchmark_nature is maturity — the skill does NOT default to offer because the actors sell products",
+        "Dimension sub-fields are maturity_level / key_metrics / certifications / commitments",
+        "No pricing-synthesis.md is produced; the comparison synthesis is named after the metric family",
+        "The recommendation uses SOCLE / ÉCART / TERRAIN D'AVANCE, not Standard / Singularité / Unicité",
+        "Every quantified indicator carries a year — an undated maturity figure is rejected",
+        "The scorecard applies the maturity sector sections and excludes the offer ones as N/A",
+        "comparables[] rows use metric=indicator with a period equal to the reference year",
+        "No commercial projection block (pricing_matrix, vehicle_catalog) is generated"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Compare les 4 principaux fournisseurs de bornes de recharge pour copropriétés en France. Je ne sais pas trop comment structurer, c'est un sujet nouveau pour nous.",
+      "expected_output": "Skill recognises the subject fits neither offer nor maturity cleanly, runs the generic profile explicitly, declares the comparable metrics in the comparability contract, and scores on core sections only.",
+      "assertions": [
+        "The skill states explicitly that it is running the generic profile and why",
+        "Dimension sub-fields are description / evidence / implication",
+        "The comparability contract declares each metric with a unit before any figure is collected",
+        "A metric with no declared unit stays in prose and does NOT enter comparables[]",
+        "The scorecard header says generic and scores core sections only, with sector sections marked N/A",
+        "The skill does not invent sector scorecard sections at run time"
+      ]
+    }
+  ]
+}

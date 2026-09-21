@@ -1,0 +1,189 @@
+{
+  "generated_at": "2026-03-25T15:00:00",
+  "source_root": "/path/to/source/folder",
+  "output_root": "/path/to/project/_parsed",
+  "files": {
+    "reports/annual_report_2024.pdf": {
+      "source_path": "/full/path/reports/annual_report_2024.pdf",
+      "output_path": "_parsed/reports/annual_report_2024.md",
+      "mtime": 1709500000.0,
+      "parsed_at": "2026-03-25T15:01:23",
+      "page_count": 42,
+      "word_count": 8500,
+      "status": "OK",
+      "extractor": "pymupdf",
+      "routing_classification": "TEXT-HEAVY",
+      "preanalysis": {
+        "total_images": 3,
+        "total_words": 8500,
+        "avg_images_per_page": 0.07,
+        "avg_words_per_page": 202.38
+      },
+      "tree_status": "SKIPPED_TOO_SHORT",
+      "tree_path": null,
+      "tree_generated_at": null
+    },
+    "contrats/SPA_v3.pdf": {
+      "source_path": "/full/path/contrats/SPA_v3.pdf",
+      "output_path": "_parsed/contrats/SPA_v3.md",
+      "mtime": 1715000000.0,
+      "parsed_at": "2026-05-13T14:42:00",
+      "page_count": 187,
+      "word_count": 42800,
+      "status": "OK",
+      "extractor": "pymupdf",
+      "routing_classification": "TEXT-HEAVY",
+      "preanalysis": {
+        "total_images": 4,
+        "total_words": 42800,
+        "avg_images_per_page": 0.02,
+        "avg_words_per_page": 228.88
+      },
+      "tree_status": "OK",
+      "tree_path": "_parsed/contrats/SPA_v3.tree.json",
+      "tree_generated_at": "2026-05-13T14:42:01"
+    },
+    "reports/carbon_footprint_2023.pdf": {
+      "source_path": "/full/path/reports/carbon_footprint_2023.pdf",
+      "output_path": "_parsed/reports/carbon_footprint_2023.md",
+      "mtime": 1709400000.0,
+      "parsed_at": "2026-03-25T15:02:45",
+      "page_count": 20,
+      "word_count": 4774,
+      "status": "OK",
+      "extractor": "pymupdf+read_tool",
+      "routing_classification": "MIXED",
+      "preanalysis": {
+        "total_images": 35,
+        "total_words": 3402,
+        "avg_images_per_page": 1.75,
+        "avg_words_per_page": 170.1,
+        "image_heavy_pages": [1, 3, 8, 18, 19, 20]
+      }
+    },
+    "policies/RGPD_v5.pdf": {
+      "source_path": "/full/path/policies/RGPD_v5.pdf",
+      "output_path": "_parsed/policies/RGPD_v5.md",
+      "mtime": 1709300000.0,
+      "parsed_at": "2026-03-25T15:03:10",
+      "page_count": 11,
+      "word_count": 2878,
+      "status": "OK",
+      "extractor": "pymupdf",
+      "routing_classification": "TEXT-HEAVY",
+      "preanalysis": {
+        "total_images": 5,
+        "total_words": 2766,
+        "avg_images_per_page": 0.45,
+        "avg_words_per_page": 251.45
+      }
+    },
+    "policies/guide_operationnel.docx": {
+      "source_path": "/full/path/policies/guide_operationnel.docx",
+      "output_path": "_parsed/policies/guide_operationnel.md",
+      "mtime": 1709200000.0,
+      "parsed_at": "2026-03-25T15:03:30",
+      "page_count": 15,
+      "word_count": 3200,
+      "status": "OK",
+      "extractor": "python_docx",
+      "routing_classification": "N/A",
+      "preanalysis": null
+    },
+    "presentations/kickoff.pptx": {
+      "source_path": "/full/path/presentations/kickoff.pptx",
+      "output_path": "_parsed/presentations/kickoff.md",
+      "mtime": 1709100000.0,
+      "parsed_at": "2026-03-25T15:03:45",
+      "page_count": 25,
+      "word_count": 1800,
+      "status": "OK",
+      "extractor": "python_pptx",
+      "routing_classification": "N/A",
+      "preanalysis": null
+    },
+    "data/KPIs_2024.xlsx": {
+      "source_path": "/full/path/data/KPIs_2024.xlsx",
+      "output_path": null,
+      "mtime": 1709050000.0,
+      "parsed_at": "2026-03-25T15:03:50",
+      "page_count": null,
+      "word_count": null,
+      "status": "SKIP_EXCEL",
+      "extractor": null,
+      "routing_classification": "N/A",
+      "preanalysis": null,
+      "excel_metadata": {
+        "sheets": ["Summary", "HR", "Carbon", "Ethics", "GDPR"],
+        "total_rows": 1200,
+        "first_sheet_columns": ["Date", "Entity", "KPI", "Value", "Unit"]
+      }
+    },
+    "legacy/old_report.doc": {
+      "source_path": "/full/path/legacy/old_report.doc",
+      "output_path": null,
+      "mtime": 1700000000.0,
+      "parsed_at": "2026-03-25T15:03:55",
+      "page_count": null,
+      "word_count": null,
+      "status": "SKIP_LEGACY_FORMAT",
+      "extractor": null,
+      "routing_classification": "N/A",
+      "preanalysis": null
+    },
+    "scans/scanned_contract.pdf": {
+      "source_path": "/full/path/scans/scanned_contract.pdf",
+      "output_path": "_parsed/scans/scanned_contract.md",
+      "mtime": 1708900000.0,
+      "parsed_at": "2026-03-25T15:04:30",
+      "page_count": 5,
+      "word_count": 1200,
+      "status": "OK",
+      "extractor": "read_tool_hybrid",
+      "routing_classification": "SCANNED",
+      "preanalysis": {
+        "total_images": 0,
+        "total_words": 12,
+        "avg_images_per_page": 0.0,
+        "avg_words_per_page": 2.4
+      }
+    }
+  },
+  "summary": {
+    "total_files": 9,
+    "by_status": {
+      "OK": 7,
+      "PARTIAL": 0,
+      "FAILED": 0,
+      "SKIP_EXCEL": 1,
+      "SKIP_LEGACY_FORMAT": 1,
+      "SKIP_UNSUPPORTED": 0,
+      "SKIP_IMAGE": 0
+    },
+    "by_classification": {
+      "TEXT-HEAVY": 4,
+      "IMAGE-HEAVY": 0,
+      "MIXED": 1,
+      "SCANNED": 1,
+      "N/A": 3
+    },
+    "by_extractor": {
+      "pymupdf": 4,
+      "pymupdf+read_tool": 1,
+      "read_tool_hybrid": 1,
+      "python_docx": 1,
+      "python_pptx": 1
+    },
+    "by_tree_status": {
+      "OK": 1,
+      "DEGRADED": 0,
+      "FORCED_CHUNKED": 0,
+      "SKIPPED_TOO_SHORT": 1,
+      "SKIPPED_NO_STRUCTURE": 0,
+      "SKIPPED_LOW_QUALITY": 0,
+      "FAILED": 0
+    },
+    "total_tokens_consumed": 4900,
+    "duration_seconds": 28
+  }
+}

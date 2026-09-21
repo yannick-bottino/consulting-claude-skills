@@ -1,0 +1,221 @@
+{
+  "_comment": "Consent-banner handlers, ordered by market share. Data, not code: add a handler after a mission where a banner survived, no script change needed. Handlers are tried in order; the first that clicks and makes the overlay disappear wins.",
+  "handlers": [
+    {
+      "name": "didomi",
+      "selectors": [
+        "#didomi-notice-agree-button",
+        "button#didomi-notice-agree-button",
+        ".didomi-continue-without-agreeing"
+      ],
+      "search_frames": false
+    },
+    {
+      "name": "onetrust",
+      "selectors": [
+        "#onetrust-accept-btn-handler",
+        "#accept-recommended-btn-handler",
+        ".ot-pc-refuse-all-handler"
+      ],
+      "search_frames": true
+    },
+    {
+      "name": "axeptio",
+      "selectors": [
+        "#axeptio_btn_acceptAll",
+        "button[data-testid='axeptio-accept-all']",
+        ".axeptio_btn_acceptAll"
+      ],
+      "search_frames": true
+    },
+    {
+      "name": "sirdata",
+      "selectors": [
+        "button.sd-cmp-JgqUW",
+        ".sd-cmp-accept-all",
+        "#sd-cmp button[title*='Accepter']"
+      ],
+      "search_frames": true
+    },
+    {
+      "name": "cookiebot",
+      "selectors": [
+        "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll",
+        "#CybotCookiebotDialogBodyButtonAccept"
+      ],
+      "search_frames": true
+    },
+    {
+      "name": "tarteaucitron",
+      "selectors": [
+        "#tarteaucitronPersonalize",
+        "#tarteaucitronAllAllowed",
+        "button#tarteaucitronPersonalize2"
+      ],
+      "search_frames": false
+    },
+    {
+      "name": "quantcast",
+      "selectors": [
+        "button[mode='primary'][class*='qc-cmp']",
+        ".qc-cmp2-summary-buttons button:last-child"
+      ],
+      "search_frames": true
+    },
+    {
+      "name": "usercentrics",
+      "selectors": [
+        "[data-testid='uc-accept-all-button']",
+        "#uc-btn-accept-banner"
+      ],
+      "search_frames": true
+    },
+    {
+      "name": "cookieyes",
+      "selectors": [
+        ".cky-btn-accept",
+        "button[data-cky-tag='accept-button']"
+      ],
+      "search_frames": false
+    },
+    {
+      "name": "generic-id",
+      "selectors": [
+        "[id*='cookie'] button[id*='accept']",
+        "[class*='cookie'] button[class*='accept']",
+        "[id*='consent'] button[id*='accept']"
+      ],
+      "search_frames": true
+    }
+  ],
+  "text_buttons": {
+    "fr": [
+      "Tout accepter",
+      "Accepter tout",
+      "J'accepte",
+      "Accepter et fermer",
+      "Accepter",
+      "OK pour moi",
+      "Continuer sans accepter",
+      "Tout refuser"
+    ],
+    "en": [
+      "Accept all",
+      "Accept All Cookies",
+      "I accept",
+      "Allow all",
+      "Accept",
+      "Got it",
+      "Continue without accepting",
+      "Reject all"
+    ],
+    "de": [
+      "Alle akzeptieren",
+      "Akzeptieren"
+    ],
+    "es": [
+      "Aceptar todo",
+      "Aceptar"
+    ],
+    "it": [
+      "Accetta tutto",
+      "Accetta"
+    ]
+  },
+  "_kill_comment": "Overlays removed from the DOM when no button worked. Last resort: the page content matters more than a pixel-perfect banner dismissal.",
+  "kill_selectors": [
+    "#didomi-host",
+    "#onetrust-consent-sdk",
+    "#axeptio_overlay",
+    "#sd-cmp",
+    "#CybotCookiebotDialog",
+    "#tarteaucitronRoot",
+    ".qc-cmp2-container",
+    "#usercentrics-root",
+    ".cky-consent-container",
+    "[class*='cookie-banner']",
+    "[class*='cookie-consent']",
+    "[id*='cookie-banner']"
+  ],
+  "_blocker_comment": "Text markers used to classify a failed capture. Never guess a blocker: match one of these or report 'unknown'.",
+  "blocker_markers": {
+    "captcha": [
+      "hcaptcha",
+      "recaptcha",
+      "i am not a robot",
+      "je ne suis pas un robot",
+      "verify you are human"
+    ],
+    "waf": [
+      "access denied",
+      "attention required",
+      "cloudflare",
+      "datadome",
+      "incapsula",
+      "imperva",
+      "request blocked",
+      "403 forbidden"
+    ],
+    "login": [
+      "se connecter pour",
+      "veuillez vous connecter",
+      "please log in",
+      "sign in to continue",
+      "connexion requise"
+    ],
+    "geoblock": [
+      "not available in your country",
+      "non disponible dans votre pays"
+    ],
+    "not-found": [
+      "page introuvable",
+      "page not found",
+      "404 - la page",
+      "error 404",
+      "seite nicht gefunden",
+      "pagina non trovada",
+      "cette page n'existe pas",
+      "the page you requested could not be found"
+    ]
+  },
+  "_tracker_comment": "Request domains aborted before capture. Cuts layout jitter from late-loading ad slots and shortens networkidle.",
+  "block_domains": [
+    "googletagmanager.com",
+    "google-analytics.com",
+    "doubleclick.net",
+    "googlesyndication.com",
+    "facebook.net",
+    "connect.facebook.com",
+    "hotjar.com",
+    "clarity.ms",
+    "segment.io",
+    "adnxs.com",
+    "criteo.com",
+    "taboola.com",
+    "outbrain.com",
+    "amplitude.com",
+    "mixpanel.com"
+  ],
+  "_navigation_comment": "Navigation error substrings mapped to a blocker class by capture.py. Structural errors must not be retried: an expired certificate will not fix itself between two passes.",
+  "navigation_blockers": {
+    "cert-expired": [
+      "ERR_CERT_DATE_INVALID",
+      "ERR_CERT_AUTHORITY_INVALID",
+      "ERR_CERT_COMMON_NAME_INVALID",
+      "SSL_ERROR",
+      "ERR_SSL_PROTOCOL_ERROR"
+    ],
+    "dns": [
+      "ERR_NAME_NOT_RESOLVED"
+    ],
+    "refused": [
+      "ERR_CONNECTION_REFUSED",
+      "ERR_CONNECTION_CLOSED",
+      "ERR_CONNECTION_RESET"
+    ],
+    "waf": [
+      "ERR_HTTP2_PROTOCOL_ERROR",
+      "ERR_EMPTY_RESPONSE"
+    ]
+  }
+}

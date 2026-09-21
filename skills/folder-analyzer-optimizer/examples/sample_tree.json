@@ -1,0 +1,75 @@
+{
+  "source_path": "Contrats/SPA_v3.pdf",
+  "md_path": "Contrats/SPA_v3.md",
+  "page_count": 187,
+  "heading_extraction": "pymupdf_toc",
+  "quality": "OK",
+  "generated_at": "2026-05-13T14:42:00",
+  "tree": [
+    {
+      "node_id": "n1",
+      "title": "Definitions and Interpretation",
+      "level": 1,
+      "start_page": 5,
+      "end_page": 18,
+      "preview": "In this Agreement, unless the context otherwise requires, the following terms shall have the meanings set forth in this section. References to clauses, schedules and annexes are to clauses, schedules and annexes of this Agreement.",
+      "nodes": []
+    },
+    {
+      "node_id": "n2",
+      "title": "Sale and Purchase",
+      "level": 1,
+      "start_page": 19,
+      "end_page": 34,
+      "preview": "Subject to the terms and conditions of this Agreement, the Seller agrees to sell and the Purchaser agrees to purchase the Sale Shares.",
+      "nodes": [
+        {
+          "node_id": "n2.1",
+          "title": "Purchase Price",
+          "level": 2,
+          "start_page": 19,
+          "end_page": 25,
+          "preview": "The aggregate consideration payable by the Purchaser for the Sale Shares shall be EUR 50,000,000 (the Purchase Price).",
+          "nodes": []
+        },
+        {
+          "node_id": "n2.2",
+          "title": "Earn-Out",
+          "level": 2,
+          "start_page": 26,
+          "end_page": 34,
+          "preview": "An additional amount of up to EUR 5,000,000 (the Earn-Out Amount) shall be payable subject to achievement of EBITDA targets over the 24 months following Closing.",
+          "nodes": []
+        }
+      ]
+    },
+    {
+      "node_id": "n3",
+      "title": "Representations and Warranties",
+      "level": 1,
+      "start_page": 35,
+      "end_page": 89,
+      "preview": "Each Party makes the representations and warranties set out in this Clause 3 as of the date of this Agreement and as of Closing.",
+      "nodes": [
+        {
+          "node_id": "n3.1",
+          "title": "Seller's Warranties",
+          "level": 2,
+          "start_page": 35,
+          "end_page": 67,
+          "preview": "The Seller warrants to the Purchaser that each of the statements set out in Schedule 3 is true and accurate.",
+          "nodes": []
+        },
+        {
+          "node_id": "n3.2",
+          "title": "Purchaser's Warranties",
+          "level": 2,
+          "start_page": 68,
+          "end_page": 89,
+          "preview": "The Purchaser warrants to the Seller that it has the requisite power and authority to enter into this Agreement.",
+          "nodes": []
+        }
+      ]
+    }
+  ]
+}

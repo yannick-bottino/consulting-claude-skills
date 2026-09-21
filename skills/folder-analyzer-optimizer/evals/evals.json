@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "source_doc": "TARGETCO.pdf",
+  "page_count": 437,
+  "questions": [
+    {
+      "id": "Q1",
+      "persona": "sector_analyst",
+      "question": "What is the total size of the French Individual Health Insurance (IHI) market in 2024, in euros?",
+      "ground_truth_answer": "EUR 21.5 billion, with seniors accounting for approximately 83% of the individual segment.",
+      "ground_truth_pages": [276],
+      "evidence_phrases": [
+        "21.5",
+        "seniors"
+      ],
+      "difficulty": "easy",
+      "notes": "Single-page factual, value appears in title and body of the slide."
+    },
+    {
+      "id": "Q2",
+      "persona": "sector_analyst",
+      "question": "Who are Brand-N's main competitors according to broker interviews?",
+      "ground_truth_answer": "April, Kereis Solutions, Apivia, and Zenioo are mentioned as Brand-N's main competitors.",
+      "ground_truth_pages": [426],
+      "evidence_phrases": [
+        "April",
+        "Kereis"
+      ],
+      "difficulty": "medium",
+      "notes": "Requires landing on the right competitive analysis slide."
+    },
+    {
+      "id": "Q3",
+      "persona": "sector_analyst",
+      "question": "What was the growth rate of the French Credit Protection Insurance (CPI) market between 2019 and 2023, and what is the 2023 total premium volume?",
+      "ground_truth_answer": "The CPI market grew by approximately 3% p.a. between 2019 and 2023, reaching EUR 7.9 billion in 2023.",
+      "ground_truth_pages": [321],
+      "evidence_phrases": [
+        "7.9",
+        "3%"
+      ],
+      "difficulty": "hard",
+      "notes": "Two-part question: rate AND value. The 3% figure appears in the slide title, 7.9Bn in body."
+    },
+    {
+      "id": "Q4",
+      "persona": "ic_member",
+      "question": "What is Target Co.'s expected 2025 gross revenue (2025e) in euros?",
+      "ground_truth_answer": "EUR 126.4 million in 2025e.",
+      "ground_truth_pages": [23, 26, 53],
+      "evidence_phrases": [
+        "126.4"
+      ],
+      "difficulty": "easy",
+      "notes": "Top financial KPI, repeated in executive summary (p.23 and p.26) and BP slide (p.53)."
+    },
+    {
+      "id": "Q5",
+      "persona": "ic_member",
+      "question": "What proportion of Target Co.'s total net revenues are recurring, and what are the main components?",
+      "ground_truth_answer": "Recurring revenues represent approximately 67% of total net revenues. Key recurring components include contract & claim management (~24%), recurring commissions (~18%), and other revenues (~25%); upfront net of clawback (~29%) is the main non-recurring component.",
+      "ground_truth_pages": [29],
+      "evidence_phrases": [
+        "67%",
+        "recurring"
+      ],
+      "difficulty": "medium",
+      "notes": "Requires synthesizing the breakdown."
+    },
+    {
+      "id": "Q6",
+      "persona": "ic_member",
+      "question": "What is Target Co.'s EBITDA margin in 2025e and how has it evolved historically?",
+      "ground_truth_answer": "EBITDA margin reached approximately 41% in 2025e (described as 'robust ~40%'), up from 24% in 2017. EBITDA grew at +20.4% p.a. between 2017 and 2025e, with key drivers including contract management internalization, AI-powered efficiency, and best-in-class cross-selling.",
+      "ground_truth_pages": [27, 70],
+      "evidence_phrases": [
+        "41%",
+        "EBITDA"
+      ],
+      "difficulty": "hard",
+      "notes": "Multi-part: current value + trajectory + drivers. Same slide appears twice in the doc (p.27 in Exec Summary, p.70 in Business Overview)."
+    },
+    {
+      "id": "Q7",
+      "persona": "buyer_dd",
+      "question": "What is Target Co.'s total headcount as of August 2025, and how is it distributed across functions?",
+      "ground_truth_answer": "Total headcount is 677 FTEs as of August 2025, broken down as: contract management 361 FTEs (53%), B2C acquisition 189 FTEs (28%), B2B 97 FTEs (14%), and support functions 30 FTEs (4%).",
+      "ground_truth_pages": [219],
+      "evidence_phrases": [
+        "677",
+        "FTEs"
+      ],
+      "difficulty": "easy",
+      "notes": "Operational KPI on a single slide."
+    },
+    {
+      "id": "Q8",
+      "persona": "buyer_dd",
+      "question": "What is Target Co.'s 2030 revenue target, both organic and including M&A?",
+      "ground_truth_answer": "Management targets over EUR 250 million by 2030 including M&A, with approximately EUR 210 million organically, reflecting a sustained ~10.5% annual growth.",
+      "ground_truth_pages": [53],
+      "evidence_phrases": [
+        "250",
+        "210"
+      ],
+      "difficulty": "medium",
+      "notes": "Two distinct figures (with/without M&A) on the same slide."
+    },
+    {
+      "id": "Q9",
+      "persona": "buyer_dd",
+      "question": "What is Target Co.'s dependency on offshore service providers, particularly OffshorePartner-A, and what share of total headcount does this represent?",
+      "ground_truth_answer": "OffshorePartner-A is Target Co.'s main offshore partner, with platforms accounting for approximately 56% of total FTEs (out of 677 total as of August 2025). Target Co.'s own onshore French workforce represents ~39% (especially strategic functions). The remaining ~5% is split across other providers (OffshorePartner-C, OffshorePartner-B, Other). This is a significant operational concentration risk.",
+      "ground_truth_pages": [219, 227],
+      "evidence_phrases": [
+        "OffshorePartner-A",
+        "56%"
+      ],
+      "difficulty": "hard",
+      "notes": "Page 227 has the explicit consolidated breakdown; p.219 has the function-by-entity view. Either page is a valid citation."
+    }
+  ]
+}
