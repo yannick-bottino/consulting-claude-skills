@@ -40,6 +40,7 @@ cp -r consulting-claude-skills/skills/benchmark ~/.claude/skills/
 | `de-slop` | Quality gate for AI output before it ships. Catches AI writing tells in FR and EN, plus consulting-specific ones. |
 | `humanize-output` | Applies anti-AI-pattern rewrites to de-roboticise any LLM-produced text. |
 | `deliverable-panel-review` | Multi-perspective critical review of a consulting deliverable. |
+| `deck-slop` | Build rules and audit checklist for slide decks that must not read as AI-made. 31 tells ranked by how well they actually separate AI decks from real ones, with the five diagnostic ones checked first. |
 | `file-naming-standard` | Enforces a `<Client> x <Firm>_<Mission> - <Deliverable>_YYYYMMDD.<ext>` convention just before delivery. Firm name is configurable. |
 | `meeting-summary` | Turns a raw meeting transcript into a structured, professional write-up. |
 
@@ -78,4 +79,4 @@ Every firm name, client name and engagement reference has been removed. Example 
 
 ## License
 
-MIT. `de-slop` adapts prior work by Hardik Pandya (hvpandya.com), also MIT.
+MIT. `de-slop` adapts prior work by Hardik Pandya (hvpandya.com), also MIT. `deck-slop` distils *Remove the AI slop from your decks* (Paul Moss, Analyst Academy, November 2026); the rules are rewritten in their own words and the source PDF is not redistributed.
