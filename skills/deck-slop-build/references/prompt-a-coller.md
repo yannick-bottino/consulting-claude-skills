@@ -1,14 +1,14 @@
 ---
 type: reference
 source: Analyst Academy, Remove the AI slop from your decks (Paul Moss, novembre 2026), prompt reformulé
-last-refreshed: 2026-11-13
+last-refreshed: 2026-11-14
 ---
 
 # Prompt à coller
 
 Deux versions, même contenu. Celle qui parle la langue du deck. À coller dans les instructions personnalisées de l'outil (projet, custom instructions, knowledge), ou en premier message en ajoutant « applique ces règles à chaque slide de cette conversation ».
 
-Le brief est à remplir avant, pas à improviser : audience, objectif ou décision attendue, données autorisées, couleurs et gabarit, format de sortie.
+Règles distillées de *Remove the AI slop from your decks*, Paul Moss, Analyst Academy, novembre 2026 (`theanalystacademy.com`), reformulées, le PDF d'origine n'est pas redistribué.
 
 ## Français
 

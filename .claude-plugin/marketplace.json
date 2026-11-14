@@ -11,7 +11,7 @@
       "name": "consulting-skills",
       "version": "1.0.0",
       "source": "./",
-      "description": "20 skills for consulting delivery: competitive benchmarks, deep research, project memory, deliverable QA, deck quality, meeting summaries, prompt engineering.",
+      "description": "21 skills for consulting delivery: competitive benchmarks, deep research, project memory, deliverable QA, deck quality, meeting summaries, prompt engineering.",
       "homepage": "https://github.com/yannick-bottino/consulting-claude-skills",
       "license": "MIT",
       "keywords": [
