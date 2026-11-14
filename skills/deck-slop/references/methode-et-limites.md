@@ -19,7 +19,7 @@ Cinq marqueurs font l'essentiel du travail de séparation : quelque chose au-des
 
 ## Les marqueurs où les decks réels font pire
 
-C'est la partie qui évite de dire n'importe quoi. Sur ces points, un deck professionnel fait ça **plus souvent** qu'un deck IA : les icônes en cercle (34 % contre 18 %), la couleur d'accent partout (51 % contre 18 %), les mots en gras en amorce de puce (30 % contre 17 %), les cartes flottantes (17 % contre 7 %), les polices variées ou par défaut (38 % contre 17 %), les graphiques et diagrammes décoratifs (49 % contre 39 %), les pastilles et badges (18 % contre 13 %).
+C'est la partie qui évite de dire n'importe quoi. Sur ces points, un deck professionnel fait ça **plus souvent** qu'un deck IA : les titres génériques (43 % contre 30 %), les icônes en cercle (34 % contre 18 %), la couleur d'accent partout (51 % contre 18 %), les mots en gras en amorce de puce (30 % contre 17 %), les cartes flottantes (17 % contre 7 %), les polices variées ou par défaut (38 % contre 17 %), les graphiques et diagrammes décoratifs (49 % contre 39 %), les pastilles et badges (18 % contre 13 %).
 
 Correctif recommandé quand même, mais jamais présenté comme un signe de deck IA. Les marqueurs non mesurés (même gabarit partout, fin en perspectives, sous-titre de couverture) n'ont pas pu être testés sur slides isolées.
 
@@ -33,4 +33,4 @@ Correctif recommandé quand même, mais jamais présenté comme un signe de deck
 
 Contenu distillé de *Remove the AI slop from your decks*, Paul Moss, Analyst Academy, novembre 2026 (`theanalystacademy.com`). Le PDF d'origine n'est pas redistribué ici : les règles sont reformulées, les chiffres de comparaison sont repris comme faits avec leur méthode.
 
-Les marqueurs d'écriture 13 à 17 s'appuient sur la grille publique de Wikipédia, *Signs of AI writing*. Les marqueurs 18 à 21 viennent des relectures de decks IA faites par Paul Moss. Les marqueurs 22 à 28 viennent de designers, de testeures d'outils de présentation et de praticiens, dont certains vendent des outils de design : leurs correctifs sont des opinions, seule leur description des marqueurs a été retenue. Les marqueurs 29 à 31 et tous les rangs viennent de la comparaison 100 contre 100.
+Les marqueurs d'écriture 13 à 17 s'appuient sur la grille publique de Wikipédia, *Signs of AI writing*. Les marqueurs 18 à 21 viennent des relectures de decks IA faites par Paul Moss. Les marqueurs 22 à 28 viennent de designers, de testeurs d'outils de présentation et de praticiens, dont certains vendent des outils de design : leurs correctifs sont des opinions, seule leur description des marqueurs a été retenue. Les marqueurs 29 à 31 et tous les rangs viennent de la comparaison 100 contre 100.

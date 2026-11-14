@@ -14,9 +14,9 @@ description: >
 
 # Deck slop
 
-Un deck sur trois environ trahit son outil avant la deuxième slide. Ce skill sert à l'éviter quand tu construis le deck, et à le dire quand tu le relis.
+Un deck fait par IA se repère souvent à des réglages par défaut, avant même qu'on lise le fond. Ce skill sert à les éviter quand tu construis le deck, et à les nommer quand tu le relis.
 
-Le guide d'origine, *Remove the AI slop from your decks* (Analyst Academy, Paul Moss, novembre 2026), compare cent slides produites par dix-sept outils IA à cent slides réelles de vingt-trois cabinets, banques et instituts. Il en sort cinq marqueurs forts, et trente et un correctifs. Les règles ici sont reformulées, la source n'est pas recopiée : voir `references/methode-et-limites.md`.
+Le guide d'origine, *Remove the AI slop from your decks* (Analyst Academy, Paul Moss, novembre 2026), compare 94 slides produites par dix-sept outils IA (la source en annonce cent) à cent slides réelles de vingt-trois cabinets, banques et instituts. Il en sort cinq marqueurs forts, et trente et un correctifs. Les règles ici sont reformulées, la source n'est pas recopiée : voir `references/methode-et-limites.md`.
 
 ## Ce qui est diagnostique, et ce qui ne l'est pas
 
@@ -24,11 +24,11 @@ Confondre les deux est l'erreur principale. Un deck réel utilise souvent plus q
 
 | Rang | Signaux | Ce qu'on en fait |
 |---|---|---|
-| Diagnostique | 1. Quelque chose au-dessus du titre (surtitre, eyebrow en capitales, fil d'Ariane, pastille). 2. Bandeau de bas de slide ou encadré « key takeaway ». 3. Bande de couleur pleine hauteur sur un bord. | À corriger systématiquement, ce sont eux qui donnent le deck |
+| Diagnostique | 1. Quelque chose au-dessus du titre (surtitre, eyebrow en capitales, fil d'Ariane, pastille). 2. Bandeau de bas de slide ou encadré « key takeaway ». 3. Bande de couleur pleine hauteur sur un bord. 4. Phrases de même forme (titres à deux-points, pivots en tiret cadratin). | À corriger systématiquement, ce sont eux qui donnent le deck |
 | Diagnostique | Bourrages de production : texte qui chevauche, déborde de son cadre ou de la slide, gabarit resté en placeholder, mot coupé par un retour à la ligne, chiffre du titre qui contredit le graphique | À corriger, et à vérifier slide par slide à la main |
-| Moyen | Phrases de même forme (titres à deux-points, pivots en tiret cadratin), listes en trois par habitude, mots creux (*unlock, elevate, delve, leverage, seamless*), gravité gonflée, centrage de tout | À corriger, l'effet est réel mais plus faible |
-| Faible | Cases arrondies à liseré coloré, barre d'accent au-dessus ou sous le titre, sous-titre en phrase entière sur la couverture, poids visuel uniforme, police par défaut, ombres et cartes flottantes, accent partout, palettes par défaut, pastilles et badges, tuiles de chiffres façon dashboard, grille de trois icônes, images abstraites, murs de puces | Correctif recommandé, jamais présenté comme une preuve de deck IA |
-| Non mesuré | Même gabarit sur toutes les slides, fin en « perspectives » | Correctif recommandé, aucune donnée de comparaison |
+| Moyen | Listes en trois par habitude, mots creux (*unlock, elevate, delve, leverage, seamless*), gravité gonflée, centrage de tout | À corriger, l'effet est réel mais plus faible |
+| Faible | Titres génériques, puces emoji et icônes en cercle, dégradés violets, faux chiffres sans source visible, graphiques décoratifs, attributions floues, « ce n'est pas X, c'est Y », cases arrondies à liseré coloré, barre d'accent au-dessus ou sous le titre, poids visuel uniforme, police par défaut, ombres et cartes flottantes, accent partout, palettes par défaut, pastilles et badges, tuiles de chiffres façon dashboard, grille de trois icônes, images abstraites, murs de puces | Correctif recommandé, jamais présenté comme une preuve de deck IA |
+| Non mesuré | Même gabarit sur toutes les slides, fin en « perspectives », sous-titre en phrase entière sur la couverture | Correctif recommandé, aucune donnée de comparaison |
 
 Le détail des trente et un marqueurs, avec le correctif et le test de chaque, est dans `references/tells.md`. Le contexte de mesure et ses limites, dont la liste des marqueurs où les decks réels font pire que les decks IA, est dans `references/methode-et-limites.md`.
 
@@ -38,13 +38,13 @@ Appliquer dans cet ordre, l'ordre compte.
 
 1. **Le récit avant les slides.** Écrire tous les titres en phrases complètes, dans l'ordre, et les montrer avant de construire quoi que ce soit. Si les titres lus à la suite racontent l'argument, le deck est bon. Si un titre est un label (« Overview », « Key insights », « Prochaines étapes », « Contexte »), il n'apporte rien et sera le premier défaut visible.
 2. **La matière avant la forme.** Le deck n'utilise que les chiffres, sources, audiences et objectifs fournis. Ce qui manque s'écrit `[DATA NEEDED: ...]` ou `[SOURCE NEEDED: ...]`, jamais une estimation plausible.
-3. **Une idée par slide, un élément dominant.** Un chiffre, un graphique ou une phrase gagne, le titre est nettement plus gros que le corps, tout le reste est démotionné.
+3. **Une idée par slide, un élément dominant.** Un chiffre, un graphique ou une phrase gagne, le titre est nettement plus gros que le corps, tout le reste est relégué.
 4. **La structure de la slide.** Le titre d'abord, rien au-dessus. Pas de bandeau bas, pas de bande latérale, pas de barre d'accent. Corps aligné à gauche, centrage réservé à un chiffre seul ou une citation courte.
 5. **La forme.** Une police, regular et gras seulement, trois ou quatre tailles utilisées pareil partout. Une palette choisie : un fond, un texte, un gris, un accent qui ne sert qu'à désigner ce qui compte. Pas de dégradé, pas de lueur, pas de glassmorphism, pas d'ombre, pas de carte, pas de pastille.
 6. **Le graphique.** Titre en phrase qui dit ce que le graphique prouve, grille minimale, contexte en gris, accent sur le point à voir, une annotation courte sur ce qu'il faut regarder.
 7. **La sortie.** Terminer sur la décision ou la demande, avec une échéance. Pas de slide « enjeux et perspectives ».
 
-Les règles complètes, avec les interdits de vocabulaire en français et en anglais, sont dans `references/tells.md`. Le prompt à coller dans l'outil est dans `references/prompt-a-collers.md`.
+Les règles complètes, avec les interdits de vocabulaire en français et en anglais, sont dans `references/tells.md`. Le prompt à coller dans l'outil est dans `references/prompt-a-coller.md`.
 
 ## Mode AUDIT, relire un deck
 
@@ -66,4 +66,4 @@ Pour un deck existant, ou pour s'auto-contrôler avant de livrer.
 
 ## Sources
 
-Distillé de *Remove the AI slop from your decks*, Paul Moss, Analyst Academy, novembre 2026 (`theanalystacademy.com`). Comparaison 100 slides IA contre 100 slides réelles. Les marqueurs d'écriture 13 à 17 reprennent la grille publique de Wikipédia, *Signs of AI writing*. Voir `references/methode-et-limites.md` pour la méthode, les limites et les crédits complets.
+Distillé de *Remove the AI slop from your decks*, Paul Moss, Analyst Academy, novembre 2026 (`theanalystacademy.com`). Comparaison de 94 slides IA (annoncées 100) contre 100 slides réelles. Les marqueurs d'écriture 13 à 17 reprennent la grille publique de Wikipédia, *Signs of AI writing*. Voir `references/methode-et-limites.md` pour la méthode, les limites et les crédits complets.
